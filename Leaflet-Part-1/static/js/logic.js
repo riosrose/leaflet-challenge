@@ -12,7 +12,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // API endpoint for earthquake data
 let queryUrl = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson';
 
-d3.json(queryURL).then(function (data) {
+d3.json(queryUrl).then(function (data) {
 // // Fetch earthquake data and process it
 // fetch(queryUrl)
 //   .then(response => response.json())
@@ -20,7 +20,7 @@ d3.json(queryURL).then(function (data) {
 //   .catch(error => console.error('Error fetching data:', error));
 
 // Function to create features (markers) on the map
-function createFeatures(eqData) {
+// function createFeatures(eqData) {
   // Function to style each circle marker
   function styleInfo(feature) {
     return {
@@ -49,7 +49,7 @@ function createFeatures(eqData) {
   }
 
   // Add circle markers for each earthquake
-  L.geoJSON(eqData, {
+  L.geoJSON(data, {
     pointToLayer: (feature, latlng) => L.circleMarker(latlng, styleInfo(feature)),
     onEachFeature: (feature, layer) => {
       const mag = feature.properties.mag;
@@ -78,5 +78,4 @@ legend.onAdd = function() {
 };
 
 legend.addTo(myMap);
-}
-}
+})
