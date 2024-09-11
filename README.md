@@ -9,7 +9,7 @@ Source: https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
 Dataset: https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson 
          The dataset is referanced and leveraged directly in thew code to a URL from the USGS website. Data file is in a JSON format. 
 # Code
-Source Code stored in repo to create a comprehensive data visualization project that used : HTML for structure, CSS for styling and JavaScript for interactivity. 
+Source Code stored in this repo to create a comprehensive data visualization project that used : HTML for structure, CSS for styling and JavaScript for interactivity. 
 **HTML : https://github.com/riosrose/leaflet-challenge/blob/main/Leaflet-Part-1/index.html
          This file contains the structure of the webpage where the data visualization will be displayed. It includes the necessary HTML elements, such as <html>, <head>, <body>, and may link to external CSS and JavaScript files.
 **CSS** : https://github.com/riosrose/leaflet-challenge/tree/main/Leaflet-Part-1/static/css
